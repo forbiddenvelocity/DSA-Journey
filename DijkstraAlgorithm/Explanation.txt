@@ -1,0 +1,25 @@
+Dijkstra's algorithm is a popular algorithm for finding the shortest path between nodes in a graph. It uses a priority queue and a vector to efficiently keep track of the distances to each node.
+
+Here is a step-by-step explanation of Dijkstra's algorithm along with diagrams and C++ code:
+
+Step 1: Initialization
+
+Create a priority queue (min heap) to store the nodes with their distances from the source.
+Create a vector to store the distances from the source to each node.
+Set the distance of the source node to 0 and all other nodes to infinity.
+Add the source node to the priority queue with a distance of 0.
+Step 2: Main Loop
+
+While the priority queue is not empty, repeat the following steps:
+Extract the node with the minimum distance from the priority queue.
+Explore all neighboring nodes of the extracted node.
+Step 3: Update Distances
+
+For each neighboring node, calculate the tentative distance from the source through the extracted node.
+If the tentative distance is smaller than the current distance stored in the vector, update the distance and add the node to the priority queue.
+Step 4: Repeat
+
+Continue the main loop until all nodes have been explored or the target node is reached.
+Step 5: Path Reconstruction (optional)
+
+If you need to find the shortest path itself, you can trace back from the target node to the source node using the vector of previous nodes.
